@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edson Argemon — Engenheiro de Software</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --surface2: #1c1c26;
+    --accent: #00e5a0;
+    --accent2: #7c5cfc;
+    --text: #f0f0f5;
+    --muted: #888899;
+    --border: rgba(255,255,255,0.08);
+    --mono: 'Space Mono', monospace;
+    --display: 'Syne', sans-serif;
+  }
+  body { background: var(--bg); color: var(--text); font-family: var(--display); line-height: 1.6; overflow-x: hidden; }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;
+    background: rgba(10,10,15,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 13px; font-family: var(--mono); transition: color .2s; }
+  .nav-links a:hover { color: var(--accent); }
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+    padding: 8rem 2rem 4rem; max-width: 900px; margin: 0 auto; position: relative;
+  }
+  .hero-tag {
+    font-family: var(--mono); font-size: 12px; color: var(--accent);
+    border: 1px solid rgba(0,229,160,0.3); display: inline-block;
+    padding: .3rem .8rem; border-radius: 2px; margin-bottom: 2rem;
+    animation: fadeUp .6s ease both;
+  }
+  .hero-name { font-family: var(--display); font-size: clamp(3rem, 9vw, 7rem); font-weight: 800; line-height: 1; animation: fadeUp .6s .1s ease both; }
+  .hero-name span { color: var(--accent); }
+  .hero-title { font-family: var(--mono); font-size: clamp(14px, 2vw, 18px); color: var(--muted); margin-top: 1.2rem; animation: fadeUp .6s .2s ease both; }
+  .hero-desc { max-width: 560px; color: #bbbbc8; font-size: 16px; margin-top: 1.5rem; line-height: 1.8; animation: fadeUp .6s .3s ease both; }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem; animation: fadeUp .6s .4s ease both; }
+  .btn-primary {
+    background: var(--accent); color: #0a0a0f; font-family: var(--mono); font-size: 13px; font-weight: 700;
+    padding: .75rem 1.75rem; border-radius: 2px; text-decoration: none; border: none; cursor: pointer;
+    transition: opacity .2s, transform .15s; display: inline-block;
+  }
+  .btn-primary:hover { opacity: .85; transform: translateY(-2px); }
+  .btn-outline {
+    border: 1px solid var(--border); color: var(--text); font-family: var(--mono); font-size: 13px;
+    padding: .75rem 1.75rem; border-radius: 2px; text-decoration: none; cursor: pointer;
+    transition: border-color .2s, transform .15s; display: inline-block; background: transparent;
+  }
+  .btn-outline:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .hero-grid {
+    position: absolute; right: -40px; top: 50%; transform: translateY(-50%);
+    opacity: .07; pointer-events: none; font-family: var(--mono); font-size: 11px;
+    color: var(--accent); line-height: 1.8; white-space: pre; animation: fadeUp .6s .5s ease both;
+  }
+  .section { padding: 5rem 2rem; max-width: 900px; margin: 0 auto; }
+  .section-tag {
+    font-family: var(--mono); font-size: 11px; color: var(--accent);
+    text-transform: uppercase; letter-spacing: .15em; margin-bottom: 2.5rem;
+    display: flex; align-items: center; gap: .75rem;
+  }
+  .section-tag::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .proposta-card {
+    background: var(--surface); border: 1px solid rgba(0,229,160,0.2); border-radius: 4px;
+    padding: 3rem; position: relative; overflow: hidden;
+  }
+  .proposta-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+  }
+  .proposta-badge {
+    display: inline-block; background: rgba(0,229,160,0.1); border: 1px solid rgba(0,229,160,0.3);
+    color: var(--accent); font-family: var(--mono); font-size: 11px;
+    padding: .3rem .8rem; border-radius: 2px; margin-bottom: 1.25rem;
+  }
+  .proposta-valor { font-family: var(--display); font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; color: var(--accent); line-height: 1; }
+  .proposta-valor small { font-size: .4em; color: var(--muted); font-weight: 400; }
+  .proposta-desc { font-size: 18px; color: #bbbbc8; margin-top: 1rem; max-width: 560px; line-height: 1.8; }
+  .proposta-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+  .step { background: var(--surface2); border-radius: 2px; padding: 1.5rem; border: 1px solid var(--border); }
+  .step-num { font-family: var(--mono); font-size: 11px; color: var(--accent); margin-bottom: .75rem; }
+  .step-title { font-size: 15px; font-weight: 700; }
+  .step-desc { font-size: 13px; color: var(--muted); margin-top: .4rem; line-height: 1.6; }
+  .proposta-cta { margin-top: 2.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+  .proposta-cta a { text-decoration: none; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+  .skill-pill {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 2px;
+    padding: 1rem 1.25rem; display: flex; align-items: center; gap: .75rem;
+  }
+  .skill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .skill-dot.mid { background: var(--accent2); }
+  .skill-name { font-size: 14px; flex: 1; }
+  .skill-level { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+  .exp-list { display: flex; flex-direction: column; }
+  .exp-item {
+    display: grid; grid-template-columns: 160px 1fr; gap: 0 2rem;
+    padding: 2rem 0; border-bottom: 1px solid var(--border); position: relative;
+  }
+  .exp-item:first-child { padding-top: 0; }
+  .exp-period { font-family: var(--mono); font-size: 11px; color: var(--muted); padding-top: 4px; }
+  .exp-role { font-size: 17px; font-weight: 700; }
+  .exp-company { font-family: var(--mono); font-size: 12px; color: var(--accent); margin-top: .25rem; }
+  .exp-bullets { list-style: none; margin-top: .75rem; }
+  .exp-bullets li { font-size: 14px; color: #bbbbc8; padding: .3rem 0 .3rem 1.25rem; position: relative; line-height: 1.7; }
+  .exp-bullets li::before { content: '›'; position: absolute; left: 0; color: var(--accent); }
+  .cert-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .75rem; }
+  .cert-item {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 2px;
+    padding: .875rem 1.25rem; font-size: 13px; color: #bbbbc8; display: flex; align-items: center; gap: .75rem;
+  }
+  .cert-icon { width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); flex-shrink: 0; }
+  .contato-box {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
+    padding: 2.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;
+  }
+  .contato-info { display: flex; flex-direction: column; gap: .75rem; }
+  .contato-line { font-family: var(--mono); font-size: 14px; color: #bbbbc8; }
+  .contato-line a { color: var(--accent); text-decoration: none; }
+  .contato-line a:hover { text-decoration: underline; }
+  footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 760px) {
+    nav {
+      padding: .85rem 1rem;
+      align-items: flex-start;
+      gap: .65rem;
+      flex-direction: column;
+    }
+    .nav-links {
+      width: 100%;
+      gap: .55rem 1.1rem;
+      justify-content: space-between;
+    }
+    .nav-links a { font-size: 12px; }
+    .hero { padding-top: 9.6rem; }
+    .hero-grid { display: none; }
+  }
+  @media (max-width: 600px) { .exp-item { grid-template-columns: 1fr; } .exp-period { margin-bottom: .5rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">edson.argemon</div>
+  <div class="nav-links">
+    <a href="#proposta">Proposta</a>
+    <a href="#skills">Skills</a>
+    <a href="#experiencia">Experiência</a>
+    <a href="#contato">Contato</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag">// buscando vagas Pleno+</div>
+  <h1 class="hero-name">Edson<br><span>Argemon</span></h1>
+  <p class="hero-title">$ engenheiro_de_software --stack .NET | C# | TypeScript | React | IA aplicada</p>
+  <p class="hero-desc">Bacharelado em Engenharia de Software com atuação em sistemas corporativos críticos, integrações complexas e desenvolvimento orientado à experiência do usuário. Utilizo IA no dia a dia para acelerar discovery, implementação, testes e documentação — sempre com validação técnica, foco em qualidade e segurança.</p>
+  <div class="hero-cta">
+    <a href="#proposta" class="btn-primary">Ver proposta de indicação</a>
+    <a href="#contato" class="btn-outline">Entre em contato</a>
+  </div>
+  <div class="hero-grid">const dev = {
+  name: "Edson Argemon",
+  role: "Software Engineer",
+  stack: [".NET", "C#", "TypeScript"],
+  seniority: "Pleno+",
+  open: true,
+  reward: "1 salário",
+};</div>
+</section>
+
+<section class="section" id="proposta">
+  <div class="section-tag">proposta de indicação</div>
+  <div class="proposta-card">
+    <div class="proposta-badge">// programa de referência</div>
+    <div class="proposta-valor">1 salário <small>para quem me indicar</small></div>
+    <p class="proposta-desc">
+      Se você me indicar para uma vaga e eu for contratado, você recebe <strong style="color:var(--accent)">um salário mensal completo</strong> como recompensa. Indique para empresas, recrutadores ou times que você conheça — qualquer indicação que resulte em contratação vale.
+    </p>
+    <div class="proposta-steps">
+      <div class="step">
+        <div class="step-num">// 01</div>
+        <div class="step-title">Indique</div>
+        <div class="step-desc">Me apresente para uma empresa, recrutador ou vaga que você conheça.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">// 02</div>
+        <div class="step-title">Acompanhe</div>
+        <div class="step-desc">Sigo o processo e te mantenho informado em cada etapa.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">// 03</div>
+        <div class="step-title">Receba</div>
+        <div class="step-desc">Sendo contratado, você recebe 1 salário mensal inteiro como recompensa.</div>
+      </div>
+    </div>
+    <div class="proposta-cta">
+      <a href="mailto:edson_argemon@hotmail.com?subject=Tenho uma indicação para você!" class="btn-primary">Quero indicar agora</a>
+      <a href="https://wa.me/5567992221520?text=Olá+Edson,+tenho+uma+indicação+para+você!" class="btn-outline">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="section-tag">tecnologias & habilidades</div>
+  <div class="skills-grid">
+    <div class="skill-pill"><div class="skill-dot"></div><span class="skill-name">.NET Framework</span><span class="skill-level">Avançado</span></div>
+    <div class="skill-pill"><div class="skill-dot"></div><span class="skill-name">C#</span><span class="skill-level">Avançado</span></div>
+    <div class="skill-pill"><div class="skill-dot"></div><span class="skill-name">PL/SQL</span><span class="skill-level">Avançado</span></div>
+    <div class="skill-pill"><div class="skill-dot"></div><span class="skill-name">JavaScript</span><span class="skill-level">Avançado</span></div>
+    <div class="skill-pill"><div class="skill-dot"></div><span class="skill-name">TypeScript</span><span class="skill-level">Avançado</span></div>
+    <div class="skill-pill"><div class="skill-dot"></div><span class="skill-name">IA para Desenvolvimento</span><span class="skill-level">Avançado</span></div>
+    <div class="skill-pill"><div class="skill-dot mid"></div><span class="skill-name">React</span><span class="skill-level">Intermediário</span></div>
+    <div class="skill-pill"><div class="skill-dot mid"></div><span class="skill-name">Angular</span><span class="skill-level">Intermediário</span></div>
+    <div class="skill-pill"><div class="skill-dot mid"></div><span class="skill-name">UX/UI Design</span><span class="skill-level">Intermediário</span></div>
+    <div class="skill-pill"><div class="skill-dot mid"></div><span class="skill-name">Docker</span><span class="skill-level">Intermediário</span></div>
+  </div>
+</section>
+
+<section class="section" id="experiencia">
+  <div class="section-tag">experiência profissional</div>
+  <div class="exp-list">
+
+    <div class="exp-item">
+      <div class="exp-period">Maio 2023<br>Atual</div>
+      <div>
+        <div class="exp-role">Engenheiro de Software</div>
+        <div class="exp-company">Secretaria de Administração — Governo do MS</div>
+        <ul class="exp-bullets">
+          <li>Responsável pela engenharia e manutenção evolutiva do sistema de folha de pagamento do estado, processando transações financeiras críticas para milhares de servidores públicos — utilizando C# e PL/SQL em ambiente de alta disponibilidade</li>
+          <li>Liderou a implementação de validações e novos procedimentos que reduziram inconsistências no cálculo da folha, garantindo conformidade com legislações trabalhistas e previdenciárias em constante atualização</li>
+          <li>Atuou como ponto de referência técnica na análise e resolução de incidentes em produção, assegurando SLA e continuidade operacional de sistemas legados de missão crítica</li>
+          <li>Aplicou ferramentas de IA no fluxo de desenvolvimento para acelerar análise de requisitos, refatorações e criação de testes, mantendo revisão humana e critérios rigorosos de qualidade</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Set 2022<br>Dez 2022</div>
+      <div>
+        <div class="exp-role">Desenvolvedor de Software</div>
+        <div class="exp-company">AZ Tecnologia em Gestão</div>
+        <ul class="exp-bullets">
+          <li>Desenvolveu sistemas fiscais para a SEFAZ/MS com arquitetura orientada a serviços, integrando múltiplas APIs externas com .NET, C#, Angular e Docker — garantindo rastreabilidade e conformidade tributária</li>
+          <li>Participou ativamente de todo o ciclo de desenvolvimento: levantamento de requisitos com stakeholders, modelagem de dados, implementação e entrega — operando com autonomia desde o início do projeto</li>
+          <li>Identificou e propôs refatorações que aumentaram a eficiência dos módulos críticos, reduzindo retrabalho e melhorando a manutenibilidade da base de código</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Jul 2022<br>Out 2022</div>
+      <div>
+        <div class="exp-role">DIO Campus Expert</div>
+        <div class="exp-company">Digital Innovation One</div>
+        <ul class="exp-bullets">
+          <li>Selecionado para programa de aceleração de carreira como referência técnica, conduzindo mentorias e conectando estudantes às práticas reais do mercado de tecnologia</li>
+          <li>Organizou e facilitou eventos acadêmicos que fortaleceram o ecossistema de tech em universidades da região</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Fev 2022<br>Ago 2022</div>
+      <div>
+        <div class="exp-role">Professor de Programação</div>
+        <div class="exp-company">Edune — Educação e Negócios</div>
+        <ul class="exp-bullets">
+          <li>Ministrou aulas práticas de múltiplas linguagens e frameworks — Node.js, C#, JavaScript, Java, PHP e HTML/CSS — preparando alunos para atuar diretamente no mercado</li>
+          <li>Desenvolveu currículo orientado a projetos reais, acelerando a curva de aprendizado e a empregabilidade dos alunos</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="formacao">
+  <div class="section-tag">formação & certificações</div>
+  <div style="margin-bottom:1.5rem;">
+    <div style="font-size:18px;font-weight:700;">Bacharelado em Engenharia de Software</div>
+    <div style="font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:.4rem;">Centro Universitário da Grande Dourados — 2019 a 2023</div>
+  </div>
+  <div class="cert-list">
+    <div class="cert-item"><div class="cert-icon"></div>Programação .NET Avançado — IFMG (2024)</div>
+    <div class="cert-item"><div class="cert-icon"></div>Design Centrado no Usuário (UX) — PUCRS (2024)</div>
+    <div class="cert-item"><div class="cert-icon"></div>Programação .NET Básico — IFMG (2024)</div>
+    <div class="cert-item"><div class="cert-icon"></div>Desenvolvimento Web — IFSP (2023)</div>
+    <div class="cert-item"><div class="cert-icon"></div>Bootcamp .NET Developer — DIO (2022)</div>
+    <div class="cert-item"><div class="cert-icon"></div>UX Design — Google (2022)</div>
+    <div class="cert-item"><div class="cert-icon"></div>Liderança e Resiliência — PUCRS (2021)</div>
+  </div>
+</section>
+
+<section class="section" id="contato">
+  <div class="section-tag">contato</div>
+  <div class="contato-box">
+    <div class="contato-info">
+      <div class="contato-line">📧 <a href="mailto:edson_argemon@hotmail.com">edson_argemon@hotmail.com</a></div>
+      <div class="contato-line">📱 <a href="https://wa.me/5567992221520">(67) 9.9222-1520</a></div>
+      <div class="contato-line">🔗 <a href="https://linkedin.com/in/edsonargemon" target="_blank" rel="noreferrer">linkedin.com/in/edsonargemon</a></div>
+      <div class="contato-line">📍 Campo Grande — MS</div>
+    </div>
+    <div>
+      <a href="mailto:edson_argemon@hotmail.com?subject=Tenho uma indicação para você!&body=Olá Edson, tenho uma indicação para você!" class="btn-primary" style="font-size:14px;padding:1rem 2rem;">Indicar agora e ganhar 1 salário →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Edson Argemon · Engenheiro de Software · Campo Grande, MS</p>
+  <p style="margin-top:.5rem;color:#555;">Feito com código. Aberto a oportunidades.</p>
+</footer>
+
+</body>
+</html>
