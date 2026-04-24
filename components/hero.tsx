@@ -1,4 +1,4 @@
-import { Terminal, ArrowDown } from "lucide-react";
+import { Terminal, ArrowDown, Download } from "lucide-react";
 
 export function Hero() {
   return (
@@ -63,6 +63,15 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-medium rounded-md hover:bg-muted transition-colors"
           >
             Falar comigo
+          </a>
+          <a
+            href="https://drive.google.com/uc?export=download&id=19509EDXrr8cP_DuLJwKJVbXndJ1yzB1E"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-medium rounded-md hover:bg-muted transition-colors"
+          >
+            <Download className="w-4 h-4" />
+            Download CV
           </a>
         </div>
       </div>

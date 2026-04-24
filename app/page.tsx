@@ -3,6 +3,7 @@ import { Authority } from "@/components/authority";
 import { Projects } from "@/components/projects";
 import { Stack } from "@/components/stack";
 import { About } from "@/components/about";
+import { Referral } from "@/components/referral";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Stack />
       <About />
+      <Referral />
       <Contact />
       <Footer />
     </main>

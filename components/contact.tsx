@@ -49,13 +49,15 @@ export function Contact() {
           </a>
 
           <a
-            href="tel:+5567992221520"
+            href="https://wa.me/5567992221520?text=Ol%C3%A1+Edson,+tenho+uma+indica%C3%A7%C3%A3o+para+voc%C3%AA!"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-colors flex items-center justify-between"
           >
             <div className="flex items-center gap-4">
               <Phone className="w-5 h-5 text-accent" />
               <div>
-                <p className="font-mono text-xs text-muted-foreground">Telefone</p>
+                <p className="font-mono text-xs text-muted-foreground">WhatsApp</p>
                 <p className="text-sm">(67) 99222-1520</p>
               </div>
             </div>
