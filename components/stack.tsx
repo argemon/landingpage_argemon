@@ -113,34 +113,7 @@ export function Stack() {
           ))}
         </div>
 
-        {/* Architecture diagram simulation */}
-        <div className="mt-12 p-6 bg-background border border-border rounded-lg">
-          <p className="font-mono text-xs text-muted-foreground mb-4">
-            // exemplo de arquitetura - sistema SEFAZ
-          </p>
-          <div className="overflow-x-auto">
-            <pre className="text-xs md:text-sm font-mono text-muted-foreground">
-{`┌────────────────┐      ┌────────────────┐      ┌────────────────┐
-│    Frontend    │─────▶│    REST API    │─────▶│    Service     │
-│     React      │      │   .NET Core    │      │     Layer      │
-└────────────────┘      └────────────────┘      └───────┬────────┘
-                                                        │
-                  ┌─────────────────────────────────────┴─────────────────────────────────────┐
-                  │                                                                           │
-                  ▼                                                                           ▼
-┌────────────────┐      ┌────────────────┐      ┌────────────────┐
-│    RabbitMQ    │─────▶│     Worker     │─────▶│   SQL Server   │
-│     Queue      │      │    Service     │      │    Database    │
-└───────┬────────┘      └────────────────┘      └────────────────┘
-        │
-        ▼
-┌────────────────┐
-│  Web Scraper   │
-│    Service     │
-└────────────────┘`}
-            </pre>
-          </div>
-        </div>
+
       </div>
     </section>
   );
