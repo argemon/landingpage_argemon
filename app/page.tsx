@@ -1,3 +1,5 @@
+"use client";
+
 import { Hero } from "@/components/hero";
 import { Authority } from "@/components/authority";
 import { Projects } from "@/components/projects";

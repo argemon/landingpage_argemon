@@ -1,11 +1,6 @@
 # Landing Page — Edson Argemon
 
-Este repositório contém uma landing page pessoal em HTML/CSS (arquivo único) com foco em:
-
-- apresentação profissional;
-- proposta de indicação com recompensa;
-- currículo completo e atualizado;
-- canais rápidos de contato para recrutadores e empresas.
+Uma landing page moderna e técnica desenvolvida com **Next.js**, **React** e **Tailwind CSS**, com design minimalista que transmite autoridade de engenheiro de software sênior.
 
 ---
 
@@ -13,9 +8,9 @@ Este repositório contém uma landing page pessoal em HTML/CSS (arquivo único) 
 
 A proposta central é simples e objetiva:
 
-> **Se você indicar o Edson para uma vaga e ele for contratado, você recebe 1 salário mensal completo como recompensa.**
+> **Se você indicar o Edson para uma vaga e ele for contratado, você recebe 1 salário meu como recompensa.**
 
-Essa proposta está destacada na seção **“Proposta de indicação”** da landing page, com CTA direto por e-mail e WhatsApp para facilitar a conexão com:
+Essa proposta está destacada na seção **"Programa de Indicação"** da landing page, com CTA direto por WhatsApp para facilitar a conexão com:
 
 - recrutadores;
 - gestores técnicos;
@@ -25,7 +20,7 @@ Essa proposta está destacada na seção **“Proposta de indicação”** da la
 
 ## 👨‍💻 Resumo profissional
 
-**Edson Argemon** é engenheiro de software com atuação em sistemas corporativos críticos, integração de serviços e desenvolvimento full stack com foco em qualidade, desempenho e continuidade operacional.
+**Edson Argemon** é engenheiro de software com **7 anos de experiência** em sistemas corporativos críticos, integração de serviços e desenvolvimento full stack com foco em qualidade, desempenho e continuidade operacional.
 
 ### Posicionamento técnico
 
@@ -120,7 +115,8 @@ Essa proposta está destacada na seção **“Proposta de indicação”** da la
 
 - **E-mail:** [edson_argemon@hotmail.com](mailto:edson_argemon@hotmail.com)
 - **LinkedIn:** [linkedin.com/in/edsonargemon](https://linkedin.com/in/edsonargemon)
-- **WhatsApp:** [Clique para conversar](https://wa.me/5567992221520)
+- **WhatsApp:** [Clique para conversar](https://wa.me/5567992221520?text=Ol%C3%A1+Edson,+tenho+uma+indica%C3%A7%C3%A3o+para+voc%C3%AA!)
+- **Currículo:** [Download PDF](https://drive.google.com/uc?export=download&id=19509EDXrr8cP_DuLJwKJVbXndJ1yzB1E)
 
 ---
 
@@ -128,37 +124,82 @@ Essa proposta está destacada na seção **“Proposta de indicação”** da la
 
 ```text
 .
-├── index.html   # Landing page (HTML + CSS embutido)
-├── README.md    # Documentação da proposta e currículo completo
-└── LICENSE
+├── app/
+│   ├── layout.tsx        # Layout raiz do Next.js
+│   ├── page.tsx          # Página principal
+│   └── globals.css       # Estilos globais com Tailwind
+├── components/
+│   ├── hero.tsx          # Seção hero com stats
+│   ├── authority.tsx     # Prova de autoridade
+│   ├── projects.tsx      # Portfólio de projetos
+│   ├── stack.tsx         # Stack tecnológico
+│   ├── about.tsx         # Sobre a experiência
+│   ├── referral.tsx      # Programa de indicação
+│   ├── contact.tsx       # Seção de contato
+│   └── footer.tsx        # Rodapé
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+├── next.config.ts
+└── README.md
 ```
 
 ---
 
-## 🚀 Como visualizar localmente
+## 🚀 Como rodar localmente
 
-Como a página é estática, você pode abrir diretamente no navegador:
-
-1. Faça clone do repositório;
-2. Abra `index.html` no browser.
-
-Ou rode um servidor local simples:
-
+1. Clone o repositório:
 ```bash
-python -m http.server 8000
+git clone https://github.com/argemon/landingpage_argemon.git
+cd landingpage_argemon
 ```
 
-Depois acesse: `http://localhost:8000`.
+2. Instale as dependências:
+```bash
+npm install
+```
+
+3. Rode o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+
+4. Acesse no navegador:
+```
+http://localhost:3000
+```
+
+---
+
+## 🎨 Stack tecnológico
+
+- **Next.js 15** — Framework React com SSR/SSG
+- **React 19** — Componentes UI
+- **TypeScript** — Tipagem estática
+- **Tailwind CSS v4** — Utility-first CSS framework
+- **Lucide React** — Ícones vetoriais
+
+---
+
+## 🎯 Seções da landing page
+
+1. **Hero** — Headline impactante com stats de experiência (7 anos)
+2. **Prova de Autoridade** — Métricas reais e histórico de impacto
+3. **Projetos** — Portfólio estruturado em Problema → Solução → Impacto
+4. **Stack** — Tecnologias organizadas por categoria
+5. **Sobre** — Highlights de experiência e certificações
+6. **Programa de Indicação** — Proposta clara: 1 salário por indicação convertida
+7. **Contato** — Links diretos (Email, LinkedIn, WhatsApp, Download CV)
 
 ---
 
 ## 🎯 Objetivo desta landing page
 
-Concentrar, em uma única página:
+Concentrar, em uma única página otimizada:
 
-- posicionamento técnico;
-- narrativa profissional;
-- proposta de indicação com incentivo claro;
-- contato rápido para oportunidades.
+- posicionamento técnico claro e imediato;
+- narrativa profissional baseada em impacto real;
+- proposta de indicação com incentivo claro e diferenciador;
+- contato rápido e direto para oportunidades.
 
-Assim, fica mais fácil para recrutadores e networking avaliarem aderência e iniciarem conversa.
+Assim, fica mais fácil para recrutadores, gestores e networking avaliarem aderência e iniciarem conversa.
