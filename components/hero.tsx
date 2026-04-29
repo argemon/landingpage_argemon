@@ -1,6 +1,12 @@
+"use client";
+
 import { Terminal, ArrowDown, Download } from "lucide-react";
+import { useI18n } from "@/lib/i18n";
 
 export function Hero() {
+  const { t } = useI18n();
+  const h = t.hero;
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 py-20 lg:px-20">
       {/* Background grid pattern */}
@@ -12,40 +18,35 @@ export function Hero() {
           <Terminal className="w-4 h-4 text-accent" />
           <span className="text-accent">~/edson-argemon</span>
           <span className="text-border">|</span>
-          <span>engenheiro de software</span>
+          <span>{h.role}</span>
         </div>
 
         {/* Main headline */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6 text-balance">
-          Resolvo problemas complexos de TI
+          {h.headline1}
           <span className="text-accent">.</span>
           <br />
-          <span className="text-muted-foreground">
-            Do hardware ao software em produção.
-          </span>
+          <span className="text-muted-foreground">{h.headline2}</span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed">
-          Engenharia de software com foco em{" "}
-          <span className="text-foreground">sistemas críticos</span>,{" "}
-          <span className="text-foreground">performance</span> e{" "}
-          <span className="text-foreground">automação inteligente</span>.
+          {h.subheadline}
         </p>
 
         {/* Stats bar */}
         <div className="flex flex-wrap gap-6 md:gap-10 mb-12 font-mono text-sm">
           <div className="flex items-center gap-2">
             <span className="text-accent">7</span>
-            <span className="text-muted-foreground">anos de experiência</span>
+            <span className="text-muted-foreground">{h.stats.years}</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-accent">3</span>
-            <span className="text-muted-foreground">anos de liderança</span>
+            <span className="text-muted-foreground">{h.stats.leadership}</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-accent">140k+</span>
-            <span className="text-muted-foreground">usuários impactados</span>
+            <span className="text-muted-foreground">{h.stats.users}</span>
           </div>
         </div>
 
@@ -55,14 +56,14 @@ export function Hero() {
             href="#projetos"
             className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-medium rounded-md hover:bg-accent/90 transition-colors glow-accent"
           >
-            Ver projetos
+            {h.cta.projects}
             <ArrowDown className="w-4 h-4" />
           </a>
           <a
             href="#contato"
             className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-medium rounded-md hover:bg-muted transition-colors"
           >
-            Falar comigo
+            {h.cta.contact}
           </a>
           <a
             href="https://drive.google.com/uc?export=download&id=19509EDXrr8cP_DuLJwKJVbXndJ1yzB1E"
@@ -71,7 +72,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-medium rounded-md hover:bg-muted transition-colors"
           >
             <Download className="w-4 h-4" />
-            Download CV
+            {h.cta.download}
           </a>
         </div>
       </div>
