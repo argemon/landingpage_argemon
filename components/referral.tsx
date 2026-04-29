@@ -4,7 +4,7 @@ export function Referral() {
   const benefits = [
     "Você indica uma empresa ou contato interessado",
     "Eu entro em contato e apresento meus serviços",
-    "Se fechar contrato, você ganha uma bonificação",
+    "Se fechar contrato, você ganha um salário meu",
   ];
 
   return (
@@ -50,7 +50,7 @@ export function Referral() {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center gap-2 text-muted-foreground">
                   <CheckCircle2 className="w-4 h-4 text-accent" />
-                  Bonificação por indicação convertida
+                  Um salário meu por indicação convertida
                 </li>
                 <li className="flex items-center gap-2 text-muted-foreground">
                   <CheckCircle2 className="w-4 h-4 text-accent" />

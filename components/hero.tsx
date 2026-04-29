@@ -36,7 +36,7 @@ export function Hero() {
         {/* Stats bar */}
         <div className="flex flex-wrap gap-6 md:gap-10 mb-12 font-mono text-sm">
           <div className="flex items-center gap-2">
-            <span className="text-accent">5</span>
+            <span className="text-accent">7</span>
             <span className="text-muted-foreground">anos de experiência</span>
           </div>
           <div className="flex items-center gap-2">

@@ -3,7 +3,7 @@ import { GraduationCap, Award, Users, Code2 } from "lucide-react";
 const highlights = [
   {
     icon: Code2,
-    title: "5 anos",
+    title: "7 anos",
     description: "de experiência em desenvolvimento web e ecossistemas .NET, Angular e React",
   },
   {
