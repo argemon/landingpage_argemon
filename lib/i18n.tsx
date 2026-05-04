@@ -77,7 +77,7 @@ export const translations = {
         lines: [
           { time: "[2024-03-15 08:00:01]", type: "SUCCESS", msg: "Folha de pagamento processada: 142.847 funcionários" },
           { time: "[2024-03-15 08:00:02]", type: "INFO", msg: "Cálculos fiscais: IR, INSS, FGTS - 100% validados" },
-          { time: "[2024-03-15 08:00:03]", type: "SUCCESS", msg: "Tempo de processamento: 3m 42s (meta: 5m)" },
+          { time: "[2024-03-15 08:00:03]", type: "SUCCESS", msg: "Tempo de processamento por matrícula: 9s (meta: 6s)" },
           { time: "[2024-03-15 08:00:04]", type: "INFO", msg: "Relatórios e-Social gerados e enviados" },
           { time: "[2024-03-15 08:00:05]", type: "SUCCESS", msg: "Pipeline completo. Zero erros críticos." },
         ],
@@ -299,7 +299,7 @@ export const translations = {
         lines: [
           { time: "[2024-03-15 08:00:01]", type: "SUCCESS", msg: "Payroll processed: 142,847 employees" },
           { time: "[2024-03-15 08:00:02]", type: "INFO", msg: "Tax calculations: income tax, pension, FGTS - 100% validated" },
-          { time: "[2024-03-15 08:00:03]", type: "SUCCESS", msg: "Processing time: 3m 42s (target: 5m)" },
+          { time: "[2024-03-15 08:00:03]", type: "SUCCESS", msg: "Processing time per employee: 9s (target: 6s)" },
           { time: "[2024-03-15 08:00:04]", type: "INFO", msg: "e-Social reports generated and submitted" },
           { time: "[2024-03-15 08:00:05]", type: "SUCCESS", msg: "Pipeline complete. Zero critical errors." },
         ],
@@ -521,7 +521,7 @@ export const translations = {
         lines: [
           { time: "[2024-03-15 08:00:01]", type: "SUCCESS", msg: "Nómina procesada: 142.847 empleados" },
           { time: "[2024-03-15 08:00:02]", type: "INFO", msg: "Cálculos fiscales: IR, INSS, FGTS - 100% validados" },
-          { time: "[2024-03-15 08:00:03]", type: "SUCCESS", msg: "Tiempo de procesamiento: 3m 42s (meta: 5m)" },
+          { time: "[2024-03-15 08:00:03]", type: "SUCCESS", msg: "Tiempo de procesamiento por matrícula: 9s (meta: 6s)" },
           { time: "[2024-03-15 08:00:04]", type: "INFO", msg: "Informes e-Social generados y enviados" },
           { time: "[2024-03-15 08:00:05]", type: "SUCCESS", msg: "Pipeline completo. Cero errores críticos." },
         ],
