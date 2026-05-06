@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -60,6 +61,7 @@ export default function RootLayout({
           <LanguageSwitcher />
           {children}
         </I18nProvider>
+        <Analytics />
       </body>
     </html>
   );
