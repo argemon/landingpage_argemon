@@ -31,18 +31,18 @@ export const metadata: Metadata = {
     "sistemas críticos",
   ],
   authors: [{ name: "Edson Argemon" }],
-  metadataBase: new URL("https://argemon.dev"),
+  metadataBase: new URL("https://edsonargemon.vercel.app"),
   openGraph: {
     title: "Edson Argemon | Engenheiro de Software",
     description:
       "Engenheiro de Software especializado em sistemas críticos e alta performance",
     type: "website",
     locale: "pt_BR",
-    url: "https://argemon.dev",
+    url: "https://edsonargemon.vercel.app",
     siteName: "Edson Argemon",
     images: [
       {
-        url: "https://argemon.dev/og-image.png",
+        url: "https://edsonargemon.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Edson Argemon - Engenheiro de Software",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title: "Edson Argemon | Engenheiro de Software",
     description:
       "Engenheiro de Software especializado em sistemas críticos e alta performance",
-    images: ["https://argemon.dev/og-image.png"],
+    images: ["https://edsonargemon.vercel.app/og-image.png"],
   },
 };
 
