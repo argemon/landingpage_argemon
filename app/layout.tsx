@@ -42,10 +42,11 @@ export const metadata: Metadata = {
     siteName: "Edson Argemon",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://argemon.dev/og-image.png",
         width: 1200,
         height: 630,
         alt: "Edson Argemon - Engenheiro de Software",
+        type: "image/png",
       },
     ],
   },
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
     title: "Edson Argemon | Engenheiro de Software",
     description:
       "Engenheiro de Software especializado em sistemas críticos e alta performance",
-    images: ["/og-image.jpg"],
+    images: ["https://argemon.dev/og-image.png"],
   },
 };
 
