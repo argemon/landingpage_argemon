@@ -75,6 +75,13 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${inter.variable} ${jetbrainsMono.variable} bg-background`}
     >
+      <head>
+        <meta property="og:image" content="https://edsonargemon.vercel.app/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="image" property="og:image" content="https://edsonargemon.vercel.app/og-image.png" />
+      </head>
       <body className="min-h-screen antialiased">
         <I18nProvider>
           <LanguageSwitcher />
