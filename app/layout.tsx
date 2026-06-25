@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { GptFloatButton } from "@/components/gpt-float-button";
 import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
@@ -86,6 +87,7 @@ export default function RootLayout({
         <I18nProvider>
           <LanguageSwitcher />
           {children}
+          <GptFloatButton />
         </I18nProvider>
         <Analytics />
       </body>
