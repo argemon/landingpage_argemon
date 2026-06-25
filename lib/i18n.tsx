@@ -225,6 +225,11 @@ export const translations = {
     footer: {
       links: ["Projetos", "Sobre", "Contato"],
     },
+    gpt: {
+      label: "Fale com meu Eu Virtual",
+      tooltip: "Converse com a IA do Edson",
+      ariaLabel: "Abrir o GPT Edson Argemon - Meu Eu Virtual",
+    },
   },
 
   en: {
@@ -447,6 +452,11 @@ export const translations = {
     footer: {
       links: ["Projects", "About", "Contact"],
     },
+    gpt: {
+      label: "Talk to my Virtual Self",
+      tooltip: "Chat with Edson's AI",
+      ariaLabel: "Open the Edson Argemon GPT - My Virtual Self",
+    },
   },
 
   es: {
@@ -668,6 +678,11 @@ export const translations = {
     },
     footer: {
       links: ["Proyectos", "Sobre mí", "Contacto"],
+    },
+    gpt: {
+      label: "Habla con mi Yo Virtual",
+      tooltip: "Conversa con la IA de Edson",
+      ariaLabel: "Abrir el GPT Edson Argemon - Mi Yo Virtual",
     },
   },
 };
