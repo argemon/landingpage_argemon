@@ -34,10 +34,16 @@ export function Experience() {
                 </div>
 
                 <div className="p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-colors">
+                  {/* Hierarquia: EMPRESA em destaque → Cargo → Cliente → Descrição → Resultados → Tecnologias (apoio) */}
                   <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between md:gap-4 mb-3">
                     <div>
-                      <h3 className="text-lg md:text-xl font-bold">{item.company}</h3>
-                      <p className="text-accent text-sm font-medium mt-0.5">{item.role}</p>
+                      <h3 className="text-xl md:text-2xl font-bold tracking-tight">{item.company}</h3>
+                      <p className="text-accent text-sm md:text-base font-medium mt-1">{item.role}</p>
+                      {"client" in item && item.client ? (
+                        <p className="text-xs text-muted-foreground mt-2 font-mono">
+                          <span className="text-foreground/60">{e.clientLabel}:</span> {item.client}
+                        </p>
+                      ) : null}
                     </div>
                     <span className="font-mono text-xs text-muted-foreground whitespace-nowrap mt-1">
                       {item.period}
@@ -48,25 +54,8 @@ export function Experience() {
                     {item.description}
                   </p>
 
-                  {/* Technologies */}
-                  <div className="mb-4">
-                    <h4 className="font-mono text-xs text-muted-foreground mb-2 uppercase tracking-wider">
-                      {e.techLabel}
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {item.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 bg-muted text-xs font-mono rounded border border-border"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* Results */}
-                  <div>
+                  <div className="mb-5">
                     <h4 className="font-mono text-xs text-muted-foreground mb-2 uppercase tracking-wider">
                       {e.resultsLabel}
                     </h4>
@@ -78,6 +67,18 @@ export function Experience() {
                         </li>
                       ))}
                     </ul>
+                  </div>
+
+                  {/* Technologies — apoio discreto no rodapé (apenas chips principais) */}
+                  <div className="flex flex-wrap gap-2 pt-4 border-t border-border/60">
+                    {item.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-0.5 bg-muted text-xs font-mono rounded border border-border text-muted-foreground"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </article>
