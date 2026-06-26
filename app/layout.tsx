@@ -17,26 +17,31 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Edson Argemon | Engenheiro de Software",
+  title: "Edson Argemon | Senior Software Engineer · Especialista Backend .NET",
   description:
-    "Engenheiro de Software com 5 anos de experiência em sistemas críticos, arquitetura distribuída e automação. Especialista em .NET, C#, React e infraestrutura cloud.",
+    "Senior Software Engineer especialista em Backend .NET. Arquitetura de software, APIs, microsserviços e AWS em sistemas críticos usados por milhares de usuários. Experiência Full Stack com React e Angular.",
   keywords: [
+    "senior software engineer",
+    "especialista backend .NET",
     "engenheiro de software",
-    "desenvolvedor",
+    "arquitetura de software",
+    "microsserviços",
+    "APIs",
     ".NET",
     "C#",
+    "ASP.NET",
+    "SQL Server",
+    "AWS",
     "React",
     "Angular",
-    "AWS",
-    "Azure",
     "sistemas críticos",
   ],
   authors: [{ name: "Edson Argemon" }],
   metadataBase: new URL("https://edsonargemon.vercel.app"),
   openGraph: {
-    title: "Edson Argemon | Engenheiro de Software",
+    title: "Edson Argemon | Senior Software Engineer · Especialista Backend .NET",
     description:
-      "Engenheiro de Software especializado em sistemas críticos e alta performance",
+      "Senior Software Engineer especialista em Backend .NET — arquitetura, APIs, microsserviços e AWS em sistemas críticos.",
     type: "website",
     locale: "pt_BR",
     url: "https://edsonargemon.vercel.app",
@@ -46,18 +51,43 @@ export const metadata: Metadata = {
         url: "https://edsonargemon.vercel.app/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Edson Argemon - Engenheiro de Software",
+        alt: "Edson Argemon - Senior Software Engineer, Especialista Backend .NET",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Edson Argemon | Engenheiro de Software",
+    title: "Edson Argemon | Senior Software Engineer · Especialista Backend .NET",
     description:
-      "Engenheiro de Software especializado em sistemas críticos e alta performance",
+      "Senior Software Engineer especialista em Backend .NET — arquitetura, APIs, microsserviços e AWS.",
     images: ["https://edsonargemon.vercel.app/og-image.png"],
   },
+};
+
+// Structured Data (Schema.org Person) para melhor SEO e rich results
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Edson Argemon",
+  jobTitle: "Senior Software Engineer",
+  description:
+    "Senior Software Engineer especialista em Backend .NET, com experiência em arquitetura de software, APIs, microsserviços e AWS.",
+  url: "https://edsonargemon.vercel.app",
+  email: "mailto:edson_argemon@hotmail.com",
+  sameAs: ["https://linkedin.com/in/edson-argemon"],
+  knowsAbout: [
+    ".NET",
+    "C#",
+    "ASP.NET",
+    "Arquitetura de Software",
+    "Microsserviços",
+    "APIs REST",
+    "SQL Server",
+    "AWS",
+    "React",
+    "Angular",
+  ],
 };
 
 export const viewport: Viewport = {
@@ -82,6 +112,10 @@ export default function RootLayout({
         <meta property="og:image:height" content="630" />
         <meta property="og:image:type" content="image/png" />
         <meta name="image" property="og:image" content="https://edsonargemon.vercel.app/og-image.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </head>
       <body className="min-h-screen antialiased">
         <I18nProvider>

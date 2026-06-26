@@ -10,7 +10,7 @@ export function Authority() {
   const a = t.authority;
 
   return (
-    <section className="px-6 py-24 lg:px-20 border-t border-border">
+    <section id="resultados" className="px-6 py-24 lg:px-20 border-t border-border">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="mb-16">
