@@ -230,6 +230,97 @@ export const translations = {
       tooltip: "Converse com a IA do Edson",
       ariaLabel: "Abrir o GPT Edson Argemon - Meu Eu Virtual",
     },
+    // ===================================================== NOVAS CHAVES (REVAMP RECRUTADORES) =====================================================
+    heroV2: {
+      name: "Edson Argemon",
+      role: "Senior Software Engineer",
+      specialty: "Especialista em Backend .NET",
+      tags: ["Arquitetura de Software", "APIs", "Microsserviços", "AWS"],
+      subheadline:
+        "Construo sistemas críticos de alta performance, com experiência Full Stack quando o projeto exige.",
+      ctaExperience: "Ver experiência",
+      ctaContact: "Entrar em contato",
+    },
+    aboutShort: {
+      tag: "// QUEM SOU",
+      title: "Sobre",
+      text1:
+        "Sou Engenheiro de Software especializado em desenvolvimento Backend utilizando .NET. Nos últimos anos participei da construção e evolução de sistemas críticos utilizados diariamente por milhares de usuários, atuando com arquitetura de software, APIs, regras de negócio complexas, integrações, processamento de milhões de registros e soluções em AWS.",
+      text2:
+        "Embora meu foco seja Backend, também possuo experiência com React e Angular, o que me permite atuar como Full Stack quando necessário. Meu maior diferencial é transformar problemas complexos em soluções simples e confiáveis.",
+    },
+    experience: {
+      tag: "// EXPERIÊNCIA",
+      title: "Experiência profissional",
+      subtitle: "Onde apliquei engenharia de software para resolver problemas reais em produção.",
+      techLabel: "Tecnologias",
+      resultsLabel: "Resultados",
+      clientLabel: "Cliente",
+      items: [
+        {
+          company: "Governo do Estado de MS — SAD/MS",
+          role: "Engenheiro de Software (Backend .NET)",
+          period: "2022 — Presente",
+          description:
+            "Desenvolvimento e evolução de sistemas críticos de RH e folha de pagamento utilizados por toda a administração estadual.",
+          technologies: [".NET", "C#", "SQL Server", "Angular"],
+          results: [
+            "Folha de 140k+ funcionários processada mensalmente",
+            "60% menos erros em cálculos fiscais",
+            "160h/mês de validações automatizadas",
+          ],
+        },
+        {
+          company: "AZ Tecnologia em Gestão",
+          role: "Desenvolvedor Backend / Arquiteto de Soluções",
+          period: "2021 — 2022",
+          client: "Secretaria da Fazenda de Mato Grosso do Sul (SEFAZ/MS)",
+          description:
+            "Desenvolvimento de soluções para processamento, coleta e análise de dados fiscais. Atuação em arquitetura e evolução de sistemas utilizados pela Secretaria da Fazenda de Mato Grosso do Sul.",
+          technologies: [".NET", "C#", "React", "AWS"],
+          results: [
+            "+10 milhões de registros processados",
+            "Processamentos reduzidos de horas para minutos",
+            "Plataforma utilizada por órgãos do governo estadual",
+          ],
+        },
+        {
+          company: "Edune — Educação e Negócios",
+          role: "Professor de Programação",
+          period: "Fev 2022 — Ago 2022",
+          description:
+            "Ministração de cursos voltados para desenvolvimento de software, lógica de programação e tecnologias web.",
+          technologies: ["C#", ".NET", "JavaScript", "Node.js"],
+          results: [
+            "Formação de novos desenvolvedores",
+            "Aulas práticas focadas em mercado",
+          ],
+        },
+      ],
+    },
+    techTiers: {
+      tag: "// TECNOLOGIAS",
+      title: "Tecnologias",
+      subtitle: "Organizadas por nível de domínio — do meu core de especialista ao que já utilizei.",
+      tiers: [
+        {
+          level: "Especialista",
+          items: [
+            { name: ".NET Ecosystem", description: "C#, ASP.NET, APIs REST, Microsserviços, Clean Architecture" },
+            { name: "SQL Server" },
+            { name: "Oracle PL/SQL" },
+          ],
+        },
+        {
+          level: "Experiência sólida",
+          items: [{ name: "AWS" }, { name: "React" }, { name: "Angular" }, { name: "RabbitMQ" }, { name: "Docker" }],
+        },
+        {
+          level: "Também trabalhei",
+          items: [{ name: "Node.js" }, { name: "Java" }, { name: "PostgreSQL" }, { name: "MongoDB" }, { name: "MySQL" }],
+        },
+      ],
+    },
   },
 
   en: {
@@ -457,6 +548,97 @@ export const translations = {
       tooltip: "Chat with Edson's AI",
       ariaLabel: "Open the Edson Argemon GPT - My Virtual Self",
     },
+    // ===================================================== NEW KEYS (RECRUITER REVAMP) =====================================================
+    heroV2: {
+      name: "Edson Argemon",
+      role: "Senior Software Engineer",
+      specialty: "Backend .NET Specialist",
+      tags: ["Software Architecture", "APIs", "Microservices", "AWS"],
+      subheadline:
+        "I build high-performance critical systems, with Full Stack experience when the project demands it.",
+      ctaExperience: "View experience",
+      ctaContact: "Get in touch",
+    },
+    aboutShort: {
+      tag: "// WHO I AM",
+      title: "About",
+      text1:
+        "I'm a Software Engineer specialized in Backend development with .NET. Over the past years I've helped build and evolve critical systems used daily by thousands of users, working with software architecture, APIs, complex business rules, integrations, processing of millions of records, and AWS solutions.",
+      text2:
+        "Although my focus is Backend, I also have experience with React and Angular, which lets me work Full Stack when needed. My biggest strength is turning complex problems into simple, reliable solutions.",
+    },
+    experience: {
+      tag: "// EXPERIENCE",
+      title: "Professional experience",
+      subtitle: "Where I applied software engineering to solve real problems in production.",
+      techLabel: "Technologies",
+      resultsLabel: "Results",
+      clientLabel: "Client",
+      items: [
+        {
+          company: "State Government of MS — SAD/MS",
+          role: "Software Engineer (Backend .NET)",
+          period: "2022 — Present",
+          description:
+            "Development and evolution of critical HR and payroll systems used across the entire state administration.",
+          technologies: [".NET", "C#", "SQL Server", "Angular"],
+          results: [
+            "Payroll of 140k+ employees processed monthly",
+            "60% fewer errors in tax calculations",
+            "160h/month of validations automated",
+          ],
+        },
+        {
+          company: "AZ Tecnologia em Gestão",
+          role: "Backend Developer / Solution Architect",
+          period: "2021 — 2022",
+          client: "Secretary of Finance of Mato Grosso do Sul (SEFAZ/MS)",
+          description:
+            "Development of solutions for processing, collecting and analyzing fiscal data. Worked on the architecture and evolution of systems used by the Secretary of Finance of Mato Grosso do Sul.",
+          technologies: [".NET", "C#", "React", "AWS"],
+          results: [
+            "10M+ records processed",
+            "Processing reduced from hours to minutes",
+            "Platform used by state government agencies",
+          ],
+        },
+        {
+          company: "Edune — Education & Business",
+          role: "Programming Instructor",
+          period: "Feb 2022 — Aug 2022",
+          description:
+            "Teaching courses focused on software development, programming logic and web technologies.",
+          technologies: ["C#", ".NET", "JavaScript", "Node.js"],
+          results: [
+            "Trained new developers",
+            "Hands-on, market-focused classes",
+          ],
+        },
+      ],
+    },
+    techTiers: {
+      tag: "// TECHNOLOGIES",
+      title: "Technologies",
+      subtitle: "Organized by level of mastery — from my specialist core to what I've also used.",
+      tiers: [
+        {
+          level: "Specialist",
+          items: [
+            { name: ".NET Ecosystem", description: "C#, ASP.NET, REST APIs, Microservices, Clean Architecture" },
+            { name: "SQL Server" },
+            { name: "Oracle PL/SQL" },
+          ],
+        },
+        {
+          level: "Solid experience",
+          items: [{ name: "AWS" }, { name: "React" }, { name: "Angular" }, { name: "RabbitMQ" }, { name: "Docker" }],
+        },
+        {
+          level: "Also worked with",
+          items: [{ name: "Node.js" }, { name: "Java" }, { name: "PostgreSQL" }, { name: "MongoDB" }, { name: "MySQL" }],
+        },
+      ],
+    },
   },
 
   es: {
@@ -683,6 +865,97 @@ export const translations = {
       label: "Habla con mi Yo Virtual",
       tooltip: "Conversa con la IA de Edson",
       ariaLabel: "Abrir el GPT Edson Argemon - Mi Yo Virtual",
+    },
+    // ===================================================== NUEVAS CLAVES (REVAMP RECLUTADORES) =====================================================
+    heroV2: {
+      name: "Edson Argemon",
+      role: "Senior Software Engineer",
+      specialty: "Especialista en Backend .NET",
+      tags: ["Arquitectura de Software", "APIs", "Microservicios", "AWS"],
+      subheadline:
+        "Construyo sistemas críticos de alto rendimiento, con experiencia Full Stack cuando el proyecto lo requiere.",
+      ctaExperience: "Ver experiencia",
+      ctaContact: "Ponerse en contacto",
+    },
+    aboutShort: {
+      tag: "// QUIÉN SOY",
+      title: "Sobre mí",
+      text1:
+        "Soy Ingeniero de Software especializado en desarrollo Backend con .NET. En los últimos años participé en la construcción y evolución de sistemas críticos utilizados a diario por miles de usuarios, trabajando con arquitectura de software, APIs, reglas de negocio complejas, integraciones, procesamiento de millones de registros y soluciones en AWS.",
+      text2:
+        "Aunque mi enfoque es Backend, también tengo experiencia con React y Angular, lo que me permite actuar como Full Stack cuando es necesario. Mi mayor diferencial es transformar problemas complejos en soluciones simples y confiables.",
+    },
+    experience: {
+      tag: "// EXPERIENCIA",
+      title: "Experiencia profesional",
+      subtitle: "Donde apliqué ingeniería de software para resolver problemas reales en producción.",
+      techLabel: "Tecnologías",
+      resultsLabel: "Resultados",
+      clientLabel: "Cliente",
+      items: [
+        {
+          company: "Gobierno del Estado de MS — SAD/MS",
+          role: "Ingeniero de Software (Backend .NET)",
+          period: "2022 — Presente",
+          description:
+            "Desarrollo y evolución de sistemas críticos de RRHH y nómina utilizados por toda la administración estatal.",
+          technologies: [".NET", "C#", "SQL Server", "Angular"],
+          results: [
+            "Nómina de 140k+ empleados procesada mensualmente",
+            "60% menos errores en cálculos fiscales",
+            "160h/mes de validaciones automatizadas",
+          ],
+        },
+        {
+          company: "AZ Tecnologia em Gestão",
+          role: "Desarrollador Backend / Arquitecto de Soluciones",
+          period: "2021 — 2022",
+          client: "Secretaría de Hacienda de Mato Grosso do Sul (SEFAZ/MS)",
+          description:
+            "Desarrollo de soluciones para procesamiento, recolección y análisis de datos fiscales. Trabajo en la arquitectura y evolución de sistemas utilizados por la Secretaría de Hacienda de Mato Grosso do Sul.",
+          technologies: [".NET", "C#", "React", "AWS"],
+          results: [
+            "+10 millones de registros procesados",
+            "Procesamientos reducidos de horas a minutos",
+            "Plataforma utilizada por órganos del gobierno estatal",
+          ],
+        },
+        {
+          company: "Edune — Educación y Negocios",
+          role: "Profesor de Programación",
+          period: "Feb 2022 — Ago 2022",
+          description:
+            "Impartición de cursos enfocados en desarrollo de software, lógica de programación y tecnologías web.",
+          technologies: ["C#", ".NET", "JavaScript", "Node.js"],
+          results: [
+            "Formación de nuevos desarrolladores",
+            "Clases prácticas enfocadas en el mercado",
+          ],
+        },
+      ],
+    },
+    techTiers: {
+      tag: "// TECNOLOGÍAS",
+      title: "Tecnologías",
+      subtitle: "Organizadas por nivel de dominio — desde mi core de especialista hasta lo que también usé.",
+      tiers: [
+        {
+          level: "Especialista",
+          items: [
+            { name: ".NET Ecosystem", description: "C#, ASP.NET, APIs REST, Microservicios, Clean Architecture" },
+            { name: "SQL Server" },
+            { name: "Oracle PL/SQL" },
+          ],
+        },
+        {
+          level: "Experiencia sólida",
+          items: [{ name: "AWS" }, { name: "React" }, { name: "Angular" }, { name: "RabbitMQ" }, { name: "Docker" }],
+        },
+        {
+          level: "También trabajé con",
+          items: [{ name: "Node.js" }, { name: "Java" }, { name: "PostgreSQL" }, { name: "MongoDB" }, { name: "MySQL" }],
+        },
+      ],
     },
   },
 };
