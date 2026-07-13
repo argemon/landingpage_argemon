@@ -93,35 +93,19 @@ export function Stack() {
                     {tier.level}
                   </span>
                 </div>
-                <div className="flex flex-wrap items-stretch gap-3">
-                  {tier.items.map((item) => {
-                    const description = (item as { description?: string }).description;
-                    return description ? (
-                      // Item principal (ex.: .NET Ecosystem) — card maior com descrição do ecossistema
-                      <div
-                        key={item.name}
-                        className={`rounded-md border px-4 py-3 ${style.chip} flex flex-col gap-1 min-w-[260px] flex-1`}
-                      >
-                        <span className="font-mono text-base md:text-lg font-semibold">
-                          {item.name}
-                        </span>
-                        <span className="font-mono text-xs text-muted-foreground leading-relaxed">
-                          {description}
-                        </span>
-                      </div>
-                    ) : (
-                      <span
-                        key={item.name}
-                        className={`inline-flex items-center rounded-md border font-mono ${style.chip} ${
-                          isPrimary
-                            ? "px-4 py-2 text-sm md:text-base font-medium"
-                            : "px-3 py-1.5 text-sm"
-                        }`}
-                      >
-                        {item.name}
-                      </span>
-                    );
-                  })}
+                <div className="flex flex-wrap gap-2">
+                  {tier.items.map((item) => (
+                    <span
+                      key={item}
+                      className={`rounded-md border font-mono ${style.chip} ${
+                        isPrimary
+                          ? "px-4 py-2 text-sm md:text-base font-medium"
+                          : "px-3 py-1.5 text-sm"
+                      }`}
+                    >
+                      {item}
+                    </span>
+                  ))}
                 </div>
               </div>
             );
