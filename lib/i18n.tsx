@@ -255,14 +255,16 @@ export const translations = {
       subtitle: "Onde apliquei engenharia de software para resolver problemas reais em produção.",
       techLabel: "Tecnologias",
       resultsLabel: "Resultados",
+      clientLabel: "Cliente",
       items: [
         {
           company: "Governo do Estado de MS — SAD/MS",
+          client: "",
           role: "Engenheiro de Software (Backend .NET)",
           period: "2022 — Presente",
           description:
             "Desenvolvimento e evolução de sistemas críticos de RH e folha de pagamento utilizados por toda a administração estadual.",
-          technologies: [".NET", "C#", "ASP.NET", "PL/SQL", "SQL Server", "Oracle", "Angular"],
+          technologies: [".NET", "SQL Server", "Oracle", "Angular"],
           results: [
             "Folha de 140k+ funcionários processada mensalmente",
             "60% menos erros em cálculos fiscais",
@@ -270,26 +272,28 @@ export const translations = {
           ],
         },
         {
-          company: "SEFAZ/MS",
-          role: "Desenvolvedor Backend / Arquiteto de Solução",
+          company: "AZ Tecnologia em Gestão",
+          client: "Secretaria da Fazenda de Mato Grosso do Sul (SEFAZ/MS)",
+          role: "Desenvolvedor Backend / Arquiteto de Soluções",
           period: "2021 — 2022",
           description:
-            "Arquitetura de plataforma distribuída de coleta e análise de preços para medição de índices econômicos estaduais.",
-          technologies: [".NET Core", "C#", "React", "RabbitMQ", "Docker", "AWS"],
+            "Desenvolvimento de soluções para processamento, coleta e análise de dados fiscais. Atuação em arquitetura e evolução de sistemas utilizados pela Secretaria da Fazenda de Mato Grosso do Sul.",
+          technologies: [".NET", "React", "RabbitMQ", "AWS"],
           results: [
-            "10M+ registros processados",
-            "Processamento reduzido de 4h para 5min",
-            "100+ usuários simultâneos",
+            "+10 milhões de registros processados",
+            "Processamentos reduzidos de horas para minutos",
+            "Plataforma utilizada por órgãos do governo estadual",
           ],
         },
         {
-          company: "UFMS — Ensino & Pesquisa",
-          role: "Professor de Programação / Pesquisador",
-          period: "2019 — 2021",
+          company: "Edune — Educação e Negócios",
+          client: "",
+          role: "Professor de Programação",
+          period: "Fev/2022 — Ago/2022",
           description:
-            "Ensino de programação e iniciação científica com foco em inovação tecnológica.",
-          technologies: ["Node.js", "PHP", "C#", "JavaScript"],
-          results: ["+160 alunos formados", "Iniciação científica em inovação tecnológica"],
+            "Ministração de cursos voltados para desenvolvimento de software, lógica de programação e tecnologias web.",
+          technologies: ["C#", ".NET", "JavaScript", "Node.js"],
+          results: ["Formação de novos desenvolvedores", "Aulas práticas focadas em mercado"],
         },
       ],
     },
@@ -298,9 +302,25 @@ export const translations = {
       title: "Tecnologias",
       subtitle: "Organizadas por nível de domínio — do meu core de especialista ao que já utilizei.",
       tiers: [
-        { level: "Especialista", items: [".NET", "C#", "ASP.NET", "SQL Server", "Oracle"] },
-        { level: "Experiência sólida", items: ["AWS", "React", "Angular", "RabbitMQ", "Docker"] },
-        { level: "Também trabalhei", items: ["Node.js", "Java", "PostgreSQL", "MongoDB", "MySQL"] },
+        {
+          level: "Especialista",
+          items: [
+            {
+              name: ".NET Ecosystem",
+              description: "C#, ASP.NET, APIs REST, Microsserviços, Clean Architecture",
+            },
+            { name: "SQL Server" },
+            { name: "Oracle PL/SQL" },
+          ],
+        },
+        {
+          level: "Experiência sólida",
+          items: [{ name: "AWS" }, { name: "React" }, { name: "Angular" }, { name: "RabbitMQ" }, { name: "Docker" }],
+        },
+        {
+          level: "Também trabalhei",
+          items: [{ name: "Node.js" }, { name: "Java" }, { name: "PostgreSQL" }, { name: "MongoDB" }, { name: "MySQL" }],
+        },
       ],
     },
   },
@@ -555,14 +575,16 @@ export const translations = {
       subtitle: "Where I applied software engineering to solve real problems in production.",
       techLabel: "Technologies",
       resultsLabel: "Results",
+      clientLabel: "Client",
       items: [
         {
           company: "State Government of MS — SAD/MS",
+          client: "",
           role: "Software Engineer (Backend .NET)",
           period: "2022 — Present",
           description:
             "Development and evolution of critical HR and payroll systems used across the entire state administration.",
-          technologies: [".NET", "C#", "ASP.NET", "PL/SQL", "SQL Server", "Oracle", "Angular"],
+          technologies: [".NET", "SQL Server", "Oracle", "Angular"],
           results: [
             "Payroll of 140k+ employees processed monthly",
             "60% fewer errors in tax calculations",
@@ -570,26 +592,28 @@ export const translations = {
           ],
         },
         {
-          company: "SEFAZ/MS",
+          company: "AZ Tecnologia em Gestão",
+          client: "Secretariat of Finance of Mato Grosso do Sul (SEFAZ/MS)",
           role: "Backend Developer / Solution Architect",
           period: "2021 — 2022",
           description:
-            "Architecture of a distributed price collection and analysis platform for measuring state economic indices.",
-          technologies: [".NET Core", "C#", "React", "RabbitMQ", "Docker", "AWS"],
+            "Development of solutions for processing, collecting and analyzing fiscal data. Worked on the architecture and evolution of systems used by the Secretariat of Finance of Mato Grosso do Sul.",
+          technologies: [".NET", "React", "RabbitMQ", "AWS"],
           results: [
             "10M+ records processed",
-            "Processing reduced from 4h to 5min",
-            "100+ simultaneous users",
+            "Processing reduced from hours to minutes",
+            "Platform used by state government agencies",
           ],
         },
         {
-          company: "UFMS — Teaching & Research",
-          role: "Programming Instructor / Researcher",
-          period: "2019 — 2021",
+          company: "Edune — Education & Business",
+          client: "",
+          role: "Programming Instructor",
+          period: "Feb 2022 — Aug 2022",
           description:
-            "Programming instruction and scientific research focused on technological innovation.",
-          technologies: ["Node.js", "PHP", "C#", "JavaScript"],
-          results: ["160+ students trained", "Scientific research in technological innovation"],
+            "Teaching courses focused on software development, programming logic and web technologies.",
+          technologies: ["C#", ".NET", "JavaScript", "Node.js"],
+          results: ["New developers trained", "Hands-on, market-focused classes"],
         },
       ],
     },
@@ -598,9 +622,25 @@ export const translations = {
       title: "Technologies",
       subtitle: "Organized by level of mastery — from my specialist core to what I've also used.",
       tiers: [
-        { level: "Specialist", items: [".NET", "C#", "ASP.NET", "SQL Server", "Oracle"] },
-        { level: "Solid experience", items: ["AWS", "React", "Angular", "RabbitMQ", "Docker"] },
-        { level: "Also worked with", items: ["Node.js", "Java", "PostgreSQL", "MongoDB", "MySQL"] },
+        {
+          level: "Specialist",
+          items: [
+            {
+              name: ".NET Ecosystem",
+              description: "C#, ASP.NET, REST APIs, Microservices, Clean Architecture",
+            },
+            { name: "SQL Server" },
+            { name: "Oracle PL/SQL" },
+          ],
+        },
+        {
+          level: "Solid experience",
+          items: [{ name: "AWS" }, { name: "React" }, { name: "Angular" }, { name: "RabbitMQ" }, { name: "Docker" }],
+        },
+        {
+          level: "Also worked with",
+          items: [{ name: "Node.js" }, { name: "Java" }, { name: "PostgreSQL" }, { name: "MongoDB" }, { name: "MySQL" }],
+        },
       ],
     },
   },
@@ -855,14 +895,16 @@ export const translations = {
       subtitle: "Donde apliqué ingeniería de software para resolver problemas reales en producción.",
       techLabel: "Tecnologías",
       resultsLabel: "Resultados",
+      clientLabel: "Cliente",
       items: [
         {
           company: "Gobierno del Estado de MS — SAD/MS",
+          client: "",
           role: "Ingeniero de Software (Backend .NET)",
           period: "2022 — Presente",
           description:
             "Desarrollo y evolución de sistemas críticos de RRHH y nómina utilizados por toda la administración estatal.",
-          technologies: [".NET", "C#", "ASP.NET", "PL/SQL", "SQL Server", "Oracle", "Angular"],
+          technologies: [".NET", "SQL Server", "Oracle", "Angular"],
           results: [
             "Nómina de 140k+ empleados procesada mensualmente",
             "60% menos errores en cálculos fiscales",
@@ -870,26 +912,28 @@ export const translations = {
           ],
         },
         {
-          company: "SEFAZ/MS",
-          role: "Desarrollador Backend / Arquitecto de Solución",
+          company: "AZ Tecnologia em Gestão",
+          client: "Secretaría de Hacienda de Mato Grosso do Sul (SEFAZ/MS)",
+          role: "Desarrollador Backend / Arquitecto de Soluciones",
           period: "2021 — 2022",
           description:
-            "Arquitectura de plataforma distribuida de recolección y análisis de precios para medir índices económicos estatales.",
-          technologies: [".NET Core", "C#", "React", "RabbitMQ", "Docker", "AWS"],
+            "Desarrollo de soluciones para procesamiento, recolección y análisis de datos fiscales. Actuación en arquitectura y evolución de sistemas utilizados por la Secretaría de Hacienda de Mato Grosso do Sul.",
+          technologies: [".NET", "React", "RabbitMQ", "AWS"],
           results: [
-            "10M+ registros procesados",
-            "Procesamiento reducido de 4h a 5min",
-            "100+ usuarios simultáneos",
+            "+10 millones de registros procesados",
+            "Procesamientos reducidos de horas a minutos",
+            "Plataforma utilizada por órganos del gobierno estatal",
           ],
         },
         {
-          company: "UFMS — Enseñanza e Investigación",
-          role: "Profesor de Programación / Investigador",
-          period: "2019 — 2021",
+          company: "Edune — Educación y Negocios",
+          client: "",
+          role: "Profesor de Programación",
+          period: "Feb 2022 — Ago 2022",
           description:
-            "Enseñanza de programación e iniciación científica con enfoque en innovación tecnológica.",
-          technologies: ["Node.js", "PHP", "C#", "JavaScript"],
-          results: ["+160 alumnos formados", "Investigación científica en innovación tecnológica"],
+            "Impartición de cursos enfocados en desarrollo de software, lógica de programación y tecnologías web.",
+          technologies: ["C#", ".NET", "JavaScript", "Node.js"],
+          results: ["Formación de nuevos desarrolladores", "Clases prácticas enfocadas en el mercado"],
         },
       ],
     },
@@ -898,9 +942,25 @@ export const translations = {
       title: "Tecnologías",
       subtitle: "Organizadas por nivel de dominio — desde mi core de especialista hasta lo que también usé.",
       tiers: [
-        { level: "Especialista", items: [".NET", "C#", "ASP.NET", "SQL Server", "Oracle"] },
-        { level: "Experiencia sólida", items: ["AWS", "React", "Angular", "RabbitMQ", "Docker"] },
-        { level: "También trabajé con", items: ["Node.js", "Java", "PostgreSQL", "MongoDB", "MySQL"] },
+        {
+          level: "Especialista",
+          items: [
+            {
+              name: ".NET Ecosystem",
+              description: "C#, ASP.NET, APIs REST, Microservicios, Clean Architecture",
+            },
+            { name: "SQL Server" },
+            { name: "Oracle PL/SQL" },
+          ],
+        },
+        {
+          level: "Experiencia sólida",
+          items: [{ name: "AWS" }, { name: "React" }, { name: "Angular" }, { name: "RabbitMQ" }, { name: "Docker" }],
+        },
+        {
+          level: "También trabajé con",
+          items: [{ name: "Node.js" }, { name: "Java" }, { name: "PostgreSQL" }, { name: "MongoDB" }, { name: "MySQL" }],
+        },
       ],
     },
   },
