@@ -93,23 +93,25 @@ export function Stack() {
                     {tier.level}
                   </span>
                 </div>
-                <div className="flex flex-wrap items-stretch gap-3">
+                <div className="flex flex-wrap items-stretch gap-2">
                   {tier.items.map((item) => {
-                    const description = (item as { description?: string }).description;
-                    return description ? (
-                      // Item principal (ex.: .NET Ecosystem) — card maior com descrição do ecossistema
-                      <div
-                        key={item.name}
-                        className={`rounded-md border px-4 py-3 ${style.chip} flex flex-col gap-1 min-w-[260px] flex-1`}
-                      >
-                        <span className="font-mono text-base md:text-lg font-semibold">
-                          {item.name}
-                        </span>
-                        <span className="font-mono text-xs text-muted-foreground leading-relaxed">
-                          {description}
-                        </span>
-                      </div>
-                    ) : (
+                    // Item com descrição vira um card maior e destacado (ex: .NET Ecosystem)
+                    if ("description" in item && item.description) {
+                      return (
+                        <div
+                          key={item.name}
+                          className={`flex flex-col justify-center rounded-md border ${style.chip} px-5 py-3 w-full sm:w-auto sm:min-w-[280px]`}
+                        >
+                          <span className="font-mono text-base md:text-lg font-bold text-foreground">
+                            {item.name}
+                          </span>
+                          <span className="mt-1 font-mono text-xs text-muted-foreground leading-relaxed">
+                            {item.description}
+                          </span>
+                        </div>
+                      );
+                    }
+                    return (
                       <span
                         key={item.name}
                         className={`inline-flex items-center rounded-md border font-mono ${style.chip} ${

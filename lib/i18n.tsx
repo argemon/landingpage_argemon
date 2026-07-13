@@ -259,11 +259,12 @@ export const translations = {
       items: [
         {
           company: "Governo do Estado de MS — SAD/MS",
+          client: "",
           role: "Engenheiro de Software (Backend .NET)",
           period: "2022 — Presente",
           description:
             "Desenvolvimento e evolução de sistemas críticos de RH e folha de pagamento utilizados por toda a administração estadual.",
-          technologies: [".NET", "C#", "SQL Server", "Angular"],
+          technologies: [".NET", "SQL Server", "Oracle", "Angular"],
           results: [
             "Folha de 140k+ funcionários processada mensalmente",
             "60% menos erros em cálculos fiscais",
@@ -272,12 +273,12 @@ export const translations = {
         },
         {
           company: "AZ Tecnologia em Gestão",
+          client: "Secretaria da Fazenda de Mato Grosso do Sul (SEFAZ/MS)",
           role: "Desenvolvedor Backend / Arquiteto de Soluções",
           period: "2021 — 2022",
-          client: "Secretaria da Fazenda de Mato Grosso do Sul (SEFAZ/MS)",
           description:
             "Desenvolvimento de soluções para processamento, coleta e análise de dados fiscais. Atuação em arquitetura e evolução de sistemas utilizados pela Secretaria da Fazenda de Mato Grosso do Sul.",
-          technologies: [".NET", "C#", "React", "AWS"],
+          technologies: [".NET", "React", "RabbitMQ", "AWS"],
           results: [
             "+10 milhões de registros processados",
             "Processamentos reduzidos de horas para minutos",
@@ -286,15 +287,13 @@ export const translations = {
         },
         {
           company: "Edune — Educação e Negócios",
+          client: "",
           role: "Professor de Programação",
-          period: "Fev 2022 — Ago 2022",
+          period: "Fev/2022 — Ago/2022",
           description:
             "Ministração de cursos voltados para desenvolvimento de software, lógica de programação e tecnologias web.",
           technologies: ["C#", ".NET", "JavaScript", "Node.js"],
-          results: [
-            "Formação de novos desenvolvedores",
-            "Aulas práticas focadas em mercado",
-          ],
+          results: ["Formação de novos desenvolvedores", "Aulas práticas focadas em mercado"],
         },
       ],
     },
@@ -306,7 +305,10 @@ export const translations = {
         {
           level: "Especialista",
           items: [
-            { name: ".NET Ecosystem", description: "C#, ASP.NET, APIs REST, Microsserviços, Clean Architecture" },
+            {
+              name: ".NET Ecosystem",
+              description: "C#, ASP.NET, APIs REST, Microsserviços, Clean Architecture",
+            },
             { name: "SQL Server" },
             { name: "Oracle PL/SQL" },
           ],
@@ -577,11 +579,12 @@ export const translations = {
       items: [
         {
           company: "State Government of MS — SAD/MS",
+          client: "",
           role: "Software Engineer (Backend .NET)",
           period: "2022 — Present",
           description:
             "Development and evolution of critical HR and payroll systems used across the entire state administration.",
-          technologies: [".NET", "C#", "SQL Server", "Angular"],
+          technologies: [".NET", "SQL Server", "Oracle", "Angular"],
           results: [
             "Payroll of 140k+ employees processed monthly",
             "60% fewer errors in tax calculations",
@@ -590,12 +593,12 @@ export const translations = {
         },
         {
           company: "AZ Tecnologia em Gestão",
+          client: "Secretariat of Finance of Mato Grosso do Sul (SEFAZ/MS)",
           role: "Backend Developer / Solution Architect",
           period: "2021 — 2022",
-          client: "Secretary of Finance of Mato Grosso do Sul (SEFAZ/MS)",
           description:
-            "Development of solutions for processing, collecting and analyzing fiscal data. Worked on the architecture and evolution of systems used by the Secretary of Finance of Mato Grosso do Sul.",
-          technologies: [".NET", "C#", "React", "AWS"],
+            "Development of solutions for processing, collecting and analyzing fiscal data. Worked on the architecture and evolution of systems used by the Secretariat of Finance of Mato Grosso do Sul.",
+          technologies: [".NET", "React", "RabbitMQ", "AWS"],
           results: [
             "10M+ records processed",
             "Processing reduced from hours to minutes",
@@ -604,15 +607,13 @@ export const translations = {
         },
         {
           company: "Edune — Education & Business",
+          client: "",
           role: "Programming Instructor",
           period: "Feb 2022 — Aug 2022",
           description:
             "Teaching courses focused on software development, programming logic and web technologies.",
           technologies: ["C#", ".NET", "JavaScript", "Node.js"],
-          results: [
-            "Trained new developers",
-            "Hands-on, market-focused classes",
-          ],
+          results: ["New developers trained", "Hands-on, market-focused classes"],
         },
       ],
     },
@@ -624,7 +625,10 @@ export const translations = {
         {
           level: "Specialist",
           items: [
-            { name: ".NET Ecosystem", description: "C#, ASP.NET, REST APIs, Microservices, Clean Architecture" },
+            {
+              name: ".NET Ecosystem",
+              description: "C#, ASP.NET, REST APIs, Microservices, Clean Architecture",
+            },
             { name: "SQL Server" },
             { name: "Oracle PL/SQL" },
           ],
@@ -895,11 +899,12 @@ export const translations = {
       items: [
         {
           company: "Gobierno del Estado de MS — SAD/MS",
+          client: "",
           role: "Ingeniero de Software (Backend .NET)",
           period: "2022 — Presente",
           description:
             "Desarrollo y evolución de sistemas críticos de RRHH y nómina utilizados por toda la administración estatal.",
-          technologies: [".NET", "C#", "SQL Server", "Angular"],
+          technologies: [".NET", "SQL Server", "Oracle", "Angular"],
           results: [
             "Nómina de 140k+ empleados procesada mensualmente",
             "60% menos errores en cálculos fiscales",
@@ -908,12 +913,12 @@ export const translations = {
         },
         {
           company: "AZ Tecnologia em Gestão",
+          client: "Secretaría de Hacienda de Mato Grosso do Sul (SEFAZ/MS)",
           role: "Desarrollador Backend / Arquitecto de Soluciones",
           period: "2021 — 2022",
-          client: "Secretaría de Hacienda de Mato Grosso do Sul (SEFAZ/MS)",
           description:
-            "Desarrollo de soluciones para procesamiento, recolección y análisis de datos fiscales. Trabajo en la arquitectura y evolución de sistemas utilizados por la Secretaría de Hacienda de Mato Grosso do Sul.",
-          technologies: [".NET", "C#", "React", "AWS"],
+            "Desarrollo de soluciones para procesamiento, recolección y análisis de datos fiscales. Actuación en arquitectura y evolución de sistemas utilizados por la Secretaría de Hacienda de Mato Grosso do Sul.",
+          technologies: [".NET", "React", "RabbitMQ", "AWS"],
           results: [
             "+10 millones de registros procesados",
             "Procesamientos reducidos de horas a minutos",
@@ -922,15 +927,13 @@ export const translations = {
         },
         {
           company: "Edune — Educación y Negocios",
+          client: "",
           role: "Profesor de Programación",
           period: "Feb 2022 — Ago 2022",
           description:
             "Impartición de cursos enfocados en desarrollo de software, lógica de programación y tecnologías web.",
           technologies: ["C#", ".NET", "JavaScript", "Node.js"],
-          results: [
-            "Formación de nuevos desarrolladores",
-            "Clases prácticas enfocadas en el mercado",
-          ],
+          results: ["Formación de nuevos desarrolladores", "Clases prácticas enfocadas en el mercado"],
         },
       ],
     },
@@ -942,7 +945,10 @@ export const translations = {
         {
           level: "Especialista",
           items: [
-            { name: ".NET Ecosystem", description: "C#, ASP.NET, APIs REST, Microservicios, Clean Architecture" },
+            {
+              name: ".NET Ecosystem",
+              description: "C#, ASP.NET, APIs REST, Microservicios, Clean Architecture",
+            },
             { name: "SQL Server" },
             { name: "Oracle PL/SQL" },
           ],

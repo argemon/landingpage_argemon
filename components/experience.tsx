@@ -33,32 +33,32 @@ export function Experience() {
                   <Building2 className="w-4 h-4 text-accent md:w-5 md:h-5" />
                 </div>
 
+                {/*
+                  =====================================================
+                  CARD DE EXPERIÊNCIA ORIGINAL (preservado / comentado)
+                  =====================================================
+
                 <div className="p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-colors">
-                  {/* Hierarquia: EMPRESA em destaque → Cargo → Cliente → Descrição → Resultados → Tecnologias (apoio) */}
                   <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between md:gap-4 mb-3">
                     <div>
-                      <h3 className="text-xl md:text-2xl font-bold tracking-tight">{item.company}</h3>
-                      <p className="text-accent text-sm md:text-base font-medium mt-1">{item.role}</p>
-                      {"client" in item && item.client ? (
-                        <p className="text-xs text-muted-foreground mt-2 font-mono">
-                          <span className="text-foreground/60">{e.clientLabel}:</span> {item.client}
-                        </p>
-                      ) : null}
+                      <h3 className="text-lg md:text-xl font-bold">{item.company}</h3>
+                      <p className="text-accent text-sm font-medium mt-0.5">{item.role}</p>
                     </div>
                     <span className="font-mono text-xs text-muted-foreground whitespace-nowrap mt-1">
                       {item.period}
                     </span>
                   </div>
-
-                  <p className="text-sm text-foreground/80 leading-relaxed mb-4">
-                    {item.description}
-                  </p>
-
-                  {/* Results */}
-                  <div className="mb-5">
-                    <h4 className="font-mono text-xs text-muted-foreground mb-2 uppercase tracking-wider">
-                      {e.resultsLabel}
-                    </h4>
+                  <p className="text-sm text-foreground/80 leading-relaxed mb-4">{item.description}</p>
+                  <div className="mb-4">
+                    <h4 className="font-mono text-xs text-muted-foreground mb-2 uppercase tracking-wider">{e.techLabel}</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {item.technologies.map((tech) => (
+                        <span key={tech} className="px-2 py-1 bg-muted text-xs font-mono rounded border border-border">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-mono text-xs text-muted-foreground mb-2 uppercase tracking-wider">{e.resultsLabel}</h4>
                     <ul className="space-y-1">
                       {item.results.map((result, i) => (
                         <li key={i} className="text-sm flex items-center gap-2">
@@ -68,13 +68,58 @@ export function Experience() {
                       ))}
                     </ul>
                   </div>
+                </div>
+                */}
 
-                  {/* Technologies — apoio discreto no rodapé (apenas chips principais) */}
-                  <div className="flex flex-wrap gap-2 pt-4 border-t border-border/60">
+                {/*
+                  =====================================================
+                  NOVO CARD (hierarquia: Empresa → Cargo → Descrição →
+                  Resultados → Tecnologias como apoio)
+                  =====================================================
+                */}
+                <div className="p-6 bg-card border border-border rounded-lg hover:border-accent/50 transition-colors">
+                  {/* Empresa (maior destaque) + período */}
+                  <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between md:gap-4 mb-1">
+                    <h3 className="text-xl md:text-2xl font-bold tracking-tight text-balance">
+                      {item.company}
+                    </h3>
+                    <span className="font-mono text-xs text-muted-foreground whitespace-nowrap mt-1">
+                      {item.period}
+                    </span>
+                  </div>
+
+                  {/* Cargo */}
+                  <p className="text-accent text-sm md:text-base font-semibold mb-1">{item.role}</p>
+
+                  {/* Cliente (destaque discreto) */}
+                  {item.client && (
+                    <p className="font-mono text-xs text-muted-foreground mb-3">
+                      <span className="uppercase tracking-wider">{e.clientLabel}:</span>{" "}
+                      <span className="text-foreground/70">{item.client}</span>
+                    </p>
+                  )}
+
+                  {/* Descrição */}
+                  <p className="text-sm text-foreground/80 leading-relaxed mb-4">
+                    {item.description}
+                  </p>
+
+                  {/* Resultados (impacto em primeiro plano) */}
+                  <ul className="space-y-1.5 mb-5">
+                    {item.results.map((result, i) => (
+                      <li key={i} className="text-sm flex items-start gap-2">
+                        <ArrowRight className="w-3.5 h-3.5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Tecnologias (apoio discreto, no rodapé) */}
+                  <div className="flex flex-wrap gap-1.5 pt-4 border-t border-border/60">
                     {item.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-0.5 bg-muted text-xs font-mono rounded border border-border text-muted-foreground"
+                        className="px-2 py-0.5 text-xs font-mono text-muted-foreground border border-border rounded"
                       >
                         {tech}
                       </span>
