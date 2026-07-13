@@ -275,7 +275,7 @@ export const translations = {
           company: "AZ Tecnologia em Gestão",
           client: "Secretaria da Fazenda de Mato Grosso do Sul (SEFAZ/MS)",
           role: "Desenvolvedor Backend / Arquiteto de Soluções",
-          period: "2021 — 2022",
+          period: "2019 — 2022",
           description:
             "Desenvolvimento de soluções para processamento, coleta e análise de dados fiscais. Atuação em arquitetura e evolução de sistemas utilizados pela Secretaria da Fazenda de Mato Grosso do Sul.",
           technologies: [".NET", "React", "RabbitMQ", "AWS"],
@@ -595,7 +595,7 @@ export const translations = {
           company: "AZ Tecnologia em Gestão",
           client: "Secretariat of Finance of Mato Grosso do Sul (SEFAZ/MS)",
           role: "Backend Developer / Solution Architect",
-          period: "2021 — 2022",
+          period: "2019 — 2022",
           description:
             "Development of solutions for processing, collecting and analyzing fiscal data. Worked on the architecture and evolution of systems used by the Secretariat of Finance of Mato Grosso do Sul.",
           technologies: [".NET", "React", "RabbitMQ", "AWS"],
@@ -915,7 +915,7 @@ export const translations = {
           company: "AZ Tecnologia em Gestão",
           client: "Secretaría de Hacienda de Mato Grosso do Sul (SEFAZ/MS)",
           role: "Desarrollador Backend / Arquitecto de Soluciones",
-          period: "2021 — 2022",
+          period: "2019 — 2022",
           description:
             "Desarrollo de soluciones para procesamiento, recolección y análisis de datos fiscales. Actuación en arquitectura y evolución de sistemas utilizados por la Secretaría de Hacienda de Mato Grosso do Sul.",
           technologies: [".NET", "React", "RabbitMQ", "AWS"],
