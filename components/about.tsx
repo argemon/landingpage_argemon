@@ -79,8 +79,16 @@ export function About() {
               <h3 className="font-mono text-xs text-muted-foreground mb-2 uppercase tracking-wider">
                 {a.educationLabel}
               </h3>
-              <p className="text-sm font-medium">{a.educationTitle}</p>
-              <p className="text-xs text-muted-foreground">{a.educationInstitution}</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-sm font-medium">{a.educationTitle}</p>
+                  <p className="text-xs text-muted-foreground">{a.educationInstitution}</p>
+                </div>
+                <div className="border-t border-border pt-3">
+                  <p className="text-sm font-medium">{a.postgraduateTitle}</p>
+                  <p className="text-xs text-muted-foreground">{a.postgraduateInstitution}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
