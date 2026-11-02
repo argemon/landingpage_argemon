@@ -188,6 +188,8 @@ export const translations = {
       educationLabel: "Formação",
       educationTitle: "Bacharelado em Engenharia de Software",
       educationInstitution: "Centro Universitário da Grande Dourados | 2019 – 2025",
+      postgraduateTitle: "Pós-graduação em Arquitetura de Software",
+      postgraduateInstitution: "Uniderp | 2026",
     },
     referral: {
       tag: "// PROGRAMA DE INDICAÇÃO",
