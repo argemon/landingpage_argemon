@@ -508,10 +508,12 @@ export const translations = {
         "UX Design – Google",
       ],
       educationLabel: "Education",
-      educationTitle: "Bachelor's in Software Engineering",
-      educationInstitution: "Centro Universitário da Grande Dourados | 2019 – 2025",
-    },
-    referral: {
+    educationTitle: "Bachelor's in Software Engineering",
+    educationInstitution: "Centro Universitário da Grande Dourados | 2019 – 2025",
+    postgraduateTitle: "Postgraduate Diploma in Software Architecture",
+    postgraduateInstitution: "Uniderp | 2026",
+  },
+  referral: {
       tag: "// REFERRAL PROGRAM",
       title: "Refer & earn",
       subtitle:
@@ -828,10 +830,12 @@ export const translations = {
         "UX Design – Google",
       ],
       educationLabel: "Formación",
-      educationTitle: "Licenciatura en Ingeniería de Software",
-      educationInstitution: "Centro Universitário da Grande Dourados | 2019 – 2025",
-    },
-    referral: {
+    educationTitle: "Licenciatura en Ingeniería de Software",
+    educationInstitution: "Centro Universitário da Grande Dourados | 2019 – 2025",
+    postgraduateTitle: "Posgrado en Arquitectura de Software",
+    postgraduateInstitution: "Uniderp | 2026",
+  },
+  referral: {
       tag: "// PROGRAMA DE REFERIDOS",
       title: "Refiere y gana",
       subtitle:
