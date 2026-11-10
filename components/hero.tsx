@@ -4,8 +4,12 @@ import { Terminal, ArrowDown, Download } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 export function Hero() {
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const h = t.hero;
+  const resumeUrl =
+    locale === "en"
+      ? "https://drive.google.com/file/d/1KWg9sva-CbPBE29Vq1CN39wYkHndzyQl/view"
+      : "https://drive.google.com/file/d/19509EDXrr8cP_DuLJwKJVbXndJ1yzB1E/view";
   const hv = t.heroV2;
 
   return (
@@ -125,7 +129,7 @@ export function Hero() {
             {hv.ctaContact}
           </a>
           <a
-            href="https://drive.google.com/file/d/1KWg9sva-CbPBE29Vq1CN39wYkHndzyQl/view"
+            href={resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-medium rounded-md hover:bg-muted transition-colors"
